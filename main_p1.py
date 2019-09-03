@@ -16,7 +16,7 @@ from models.lenet5 import LeNet5
 from models.fullyconnected import FCNet
 
 parser = argparse.ArgumentParser(description = 'enter algorithm/mode of choice')
-parser.add_argument('mode', type=int, help="Enter mode = 0 for Fully connected and mode = 1 for CNN")
+parser.add_argument('--mode', type=int, help="Enter mode = 0 for Fully connected and mode = 1 for CNN")
 args = parser.parse_args()
 
 batch_size = 32
