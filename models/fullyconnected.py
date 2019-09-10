@@ -1,5 +1,6 @@
 
 import torch.nn as nn
+import torch.nn.functional as F
 
 class FCNet(nn.Module):
     def __init__(self):
@@ -10,8 +11,8 @@ class FCNet(nn.Module):
 
     def forward(self, x):
         out = self.fc1(x)
-        out = self.relu(out)
+        out = F.relu(out)
         out = self.fc2(out)
-        out = self.relu(out)
+        out = F.relu(out)
         out = self.fc3(out)
         return out
